@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <title>AIEY | Home</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      .cover {
+        height: 100svh;
+      }
+      .cover-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .story {
+        padding: 10rem 20rem 10rem 20rem;
+        display: flex;
+        gap: 8rem;
+        border: 1px solid black;
+      }
+      .story > img {
+        width: 600px;
+        height: 800px;
+        object-fit: cover;
+        box-shadow: 10px 10px;
+        border-radius: 2rem;
+      }
+      .story h1 {
+        font-size: 3rem;
+      }
+      .story p {
+        font-size: 1.3rem;
+      }
+
+      .photo-grid {
+        background: white;
+        height: 400px;
+        width: 1280px;
+        position: relative;
+      }
+
+      .photo-grid a {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 4rem;
+        text-decoration: none;
+      }
+
+      .photo-grid video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 1rem;
+        box-shadow: 10px 10px;
+      }
+      .backdrop {
+        position: absolute;
+        inset: 0;
+        background-color: black;
+        opacity: 70%;
+        color: white;
+        display: grid;
+        place-content: center;
+        padding-bottom: 10rem;
+      }
+      .backdrop h1 {
+        font-size: 18rem;
+        margin-bottom: -5rem;
+      }
+      .backdrop p {
+        text-align: center;
+        font-size: 1.5rem;
+      }
+      .footer {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cover">
+      <div class="backdrop">
+        <h1>AIEY</h1>
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            justify-content: center;
+          "
+        >
+          <img src="./assets/logo polsri.png" alt="logo polsri" width="50px" />
+          <p>Politeknik Negeri Sriwijaya</p>
+        </div>
+      </div>
+      <img class="cover-img" src="./assets/11.jpeg" alt="cover" />
+    </div>
+    <div class="story" style="background-color: #a9b388;">
+      <img src="./assets/8.jpeg" alt="hero-1" style="rotate: -3deg;" />
+      <div>
+        <h1>We are...</h1>
+        <p>
+          Information Management students currently studying at the Sriwijaya
+          State Polytechnic. We come from various places, such as Jambi,
+          Banyuasin, Palembang, Medan, Padang.
+        </p>
+
+        <p>
+          Our favorite activities seem to be causing chaos, being noisy, and
+          arguing. Btw, this is one of the moments when we are gathering
+          together!
+        </p>
+      </div>
+    </div>
+    <div class="story" style="background-color: #fefae0;">
+      <div>
+        <h1>Unique</h1>
+        <p>
+          There are many
+          <strong>unique</strong>
+          individuals in this class. And soon, we will undergo an internship
+          process and then graduate, amin. Please pray that our studies go
+          smoothly!
+        </p>
+
+        <p>
+          &quot;Just keep swimming.&quot; - Finding Nemo
+        </p>
+      </div>
+      <img src="./assets/1.jpg" alt="hero-1" style="rotate: 3deg;" />
+    </div>
+
+    <div class="story" style="background-color: #a9b388;">
+      <img src="./assets/2.jpeg" alt="hero-1" style="rotate: -3deg;" />
+
+      <div style="font-size: 1.3rem;">
+        <h1>Our Social Media</h1>
+        <ul>
+          <li><a href="https://www.instagram.com/aiey.22/">instagram</a></li>
+          <li><a href="https://www.instagram.com/aiey.22/">Tiktok</a></li>
+          <li><a href="https://www.instagram.com/aiey.22/">Youtube</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div
+      class="story"
+      style="padding-bottom: 13rem; background-color: #fefae0;"
+    >
+      <div>
+        <h1>Gallery</h1>
+        <div class="photo-grid">
+          <video src="./assets/v1.MOV" autoplay loop muted></video>
+
+          <!-- <img src="./assets/dump-image.jpeg" alt="foto" /> -->
+          <div class="backdrop" style="border-radius: 1rem;"></div>
+          <a href="./gallery.html">See more</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer" style="background-color: #b99470;">
+      <p>By Bima Saputra - 2024</p>
+    </div>
+  </body>
+</html>
