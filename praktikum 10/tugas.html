@@ -1,0 +1,240 @@
+<!-- Bima Saputra - 4IA -->
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulir Pembelian Toko Roti Bimbim</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 20px;
+      }
+
+      h1 {
+        padding-left: 4.2rem;
+      }
+
+      h1,
+      h2 {
+        color: #333;
+      }
+
+      form {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 1700px;
+        margin: auto;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .form-group input[type='text'],
+      .form-group input[type='email'],
+      .form-group input[type='tel'],
+      .form-group input[type='number'],
+      .form-group input[type='date'],
+      .form-group textarea,
+      .form-group select {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      .form-group input[type='checkbox'],
+      .form-group input[type='radio'] {
+        margin-right: 10px;
+      }
+
+      .form-group textarea {
+        resize: vertical;
+        height: 100px;
+      }
+
+      .form-group input[type='submit'],
+      .form-group input[type='reset'] {
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .form-group input[type='submit'] {
+        background-color: #03bfe0;
+        color: white;
+      }
+
+      .form-group input[type='reset'] {
+        background-color: #f75969;
+        color: white;
+      }
+
+      .form-group input[type='submit']:hover {
+        background-color: #09a2bd;
+      }
+
+      .form-group input[type='reset']:hover {
+        background-color: #c82333;
+      }
+
+      .flex {
+        display: flex;
+        gap: 3;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Formulir Pembelian Toko Roti Bimbim</h1>
+    <form action="/submit_order" method="post">
+      <!-- Informasi Pembeli -->
+      <div class="form-group">
+        <label for="nama">Nama Lengkap:</label>
+        <input type="text" id="nama" name="nama" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Alamat Email:</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="telepon">Nomor Telepon:</label>
+        <input type="tel" id="telepon" name="telepon" required />
+      </div>
+
+      <!-- Alamat Pengiriman -->
+      <h2>Alamat Pengiriman</h2>
+      <div class="form-group">
+        <label for="alamat">Alamat Lengkap:</label>
+        <textarea id="alamat" name="alamat" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="kota">Kota:</label>
+        <input type="text" id="kota" name="kota" required />
+      </div>
+
+      <div class="form-group">
+        <label for="kode_pos">Kode Pos:</label>
+        <input type="text" id="kode_pos" name="kode_pos" required />
+      </div>
+
+      <div class="form-group">
+        <label for="catatan">Catatan Tambahan:</label>
+        <textarea id="catatan" name="catatan"></textarea>
+      </div>
+
+      <!-- Detail Produk -->
+      <h2>Detail Produk</h2>
+      <div class="form-group">
+        <label>Pilih Produk:</label>
+        <div class="flex">
+          <input
+            type="checkbox"
+            id="roti_tawar"
+            name="produk"
+            value="roti_tawar"
+          />
+          <label for="roti_tawar">Roti Tawar</label>
+        </div>
+        <div class="flex">
+          <input
+            type="checkbox"
+            id="roti_gandum"
+            name="produk"
+            value="roti_gandum"
+          />
+          <label for="roti_gandum">Roti Gandum</label>
+        </div>
+        <div class="flex">
+          <input
+            type="checkbox"
+            id="roti_keju"
+            name="produk"
+            value="roti_keju"
+          />
+          <label for="roti_keju">Roti Keju</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="jumlah">Jumlah:</label>
+        <input type="number" id="jumlah" name="jumlah" min="1" required />
+      </div>
+
+      <div class="form-group">
+        <label for="varian">Ukuran atau Varian:</label>
+        <select id="varian" name="varian">
+          <option value="kecil">Kecil</option>
+          <option value="sedang">Sedang</option>
+          <option value="besar">Besar</option>
+        </select>
+      </div>
+
+      <!-- Metode Pembayaran -->
+      <h2>Metode Pembayaran</h2>
+      <div class="form-group">
+        <label>Pilih Metode Pembayaran:</label>
+        <div class="flex">
+          <input
+            type="radio"
+            id="transfer_bank"
+            name="pembayaran"
+            value="transfer_bank"
+            required
+          />
+          <label for="transfer_bank">Transfer Bank</label>
+        </div>
+        <div class="flex">
+          <input
+            type="radio"
+            id="kartu_kredit"
+            name="pembayaran"
+            value="kartu_kredit"
+          />
+          <label for="kartu_kredit">Kartu Kredit</label>
+        </div>
+        <div class="flex">
+          <input type="radio" id="cod" name="pembayaran" value="cod" />
+          <label for="cod">COD (Bayar di Tempat)</label>
+        </div>
+      </div>
+
+      <!-- Informasi Tambahan -->
+      <h2>Informasi Tambahan</h2>
+      <div class="form-group">
+        <label for="tanggal">Tanggal Pengiriman:</label>
+        <input type="date" id="tanggal" name="tanggal" required />
+      </div>
+
+      <div class="form-group">
+        <label for="waktu">Waktu Pengiriman:</label>
+        <select id="waktu" name="waktu" required>
+          <option value="pagi">Pagi (08:00 - 12:00)</option>
+          <option value="siang">Siang (12:00 - 16:00)</option>
+          <option value="sore">Sore (16:00 - 20:00)</option>
+        </select>
+      </div>
+
+      <!-- Tombol Aksi -->
+      <div class="form-group">
+        <input type="submit" value="Submit" />
+        <input type="reset" value="Reset" />
+      </div>
+    </form>
+  </body>
+</html>
