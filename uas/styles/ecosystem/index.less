@@ -1,0 +1,70 @@
+@import '../global.less';
+
+body {
+  background-color: @primary-color;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: -4rem;
+  h1 {
+    font-size: 3em;
+    align-self: center;
+  }
+}
+
+/* position dots in carousel */
+.flickity-page-dots {
+  bottom: 0px;
+}
+/* white circles */
+.flickity-page-dots .dot {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background: transparent;
+  border: 2px solid white;
+}
+/* fill-in selected dot */
+.flickity-page-dots .dot.is-selected {
+  background: white;
+}
+
+.carousel-cell {
+  p {
+    position: absolute;
+    opacity: 0;
+    z-index: 2;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    transition: all 300ms ease-in-out;
+    font-weight: 700;
+  }
+  img {
+    width: 1280px;
+    height: 720px;
+    transition: all 300ms ease-in-out;
+
+    &:hover {
+      filter: brightness(0.5);
+      transition: all 300ms ease-in-out;
+    }
+  }
+
+  &:hover {
+    p {
+      transform: translate(-50%, -50%);
+      opacity: 1;
+    }
+
+    img {
+      filter: brightness(0.5);
+      transform: scale(1.05);
+      transition: all 300ms ease-in-out;
+    }
+  }
+}

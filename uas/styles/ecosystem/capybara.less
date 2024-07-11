@@ -1,0 +1,131 @@
+@import '../global.less';
+@import '../animation.less';
+
+@primary-color: #f3ff90;
+@secondary-color: #059212;
+@thirdary-color: #9bec00;
+@accent-color: #06d001;
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-size: 3em;
+    .animaiton-text-gradient(@accent-color, @thirdary-color);
+  }
+
+  p {
+    margin-top: -2rem;
+  }
+}
+
+.container-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+hr {
+  width: 5rem;
+  height: 5px;
+  border: 0;
+  margin: 1rem auto 3rem auto;
+  background-color: @accent-color;
+}
+
+.container-2 {
+  display: flex;
+  justify-content: center;
+  width: 1200px;
+  height: 550px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.container-3 {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+
+  .card {
+    border-radius: 0.8rem;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 900px;
+    background-color: @thirdary-color;
+
+    &:hover {
+      .animation-gradient(@secondary-color, @thirdary-color);
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 24px;
+      color: @primary-color;
+    }
+
+    h3 {
+      font-size: 18px;
+      color: @primary-color;
+    }
+
+    p,
+    ul,
+    blockquote,
+    ins,
+    pre {
+      font-size: 14px;
+      color: @primary-color;
+    }
+  }
+}
+
+.footer {
+  background-color: @accent-color;
+  color: @secondary-color;
+  padding: 0 0 20px 0;
+  width: 945px;
+  border-radius: 2rem 2rem 0 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    .footer-info {
+      h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      p {
+        margin: 5px 0;
+      }
+    }
+
+    .footer-social {
+      a {
+        margin: 0 10px;
+        img {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+}

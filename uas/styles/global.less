@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+@primary-color: #1b3431;
+@secondary-color: #ffffff;
+@thirdary-color: #d9d9d9;
+@accent-color: #1c8138;
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: @primary-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+blockquote,
+ins,
+pre,
+p {
+  color: @secondary-color;
+}
+
+@change-body-color-duration: 2s;
+.body-color-1 {
+  transition: all @change-body-color-duration ease-in-out;
+  background-color: #f3ff90;
+}
+
+.body-color-2 {
+  transition: all @change-body-color-duration ease-in-out;
+  background-color: #050c9c;
+}
+
+.body-color-3 {
+  transition: all @change-body-color-duration ease-in-out;
+  background-color: #fed8b1;
+}
+
+.body-color-4 {
+  transition: all @change-body-color-duration ease-in-out;
+  background-color: #e3e7f1;
+}
+
+.body-color-5 {
+  transition: all @change-body-color-duration ease-in-out;
+  background-color: #070f2b;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5rem 0 5rem;
+
+  a {
+    color: @secondary-color;
+    text-decoration: none;
+  }
+
+  .navbar-brand {
+    font-size: x-large;
+    font-weight: bold;
+  }
+
+  .navbar-menu {
+    display: flex;
+    gap: 2rem;
+    font-size: x-large;
+    list-style-type: none;
+  }
+}

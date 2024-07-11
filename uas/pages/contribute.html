@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Encyclopedia | Contribute</title>
+    <link
+      rel="stylesheet/less"
+      type="text/css"
+      href="../styles/contribute/index.less"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/less"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <a href="../index.html">My Encyclopedia</a>
+      </div>
+      <ul class="navbar-menu">
+        <li><a href="../pages/ecosystem.html">Collections</a></li>
+        <li><a href="../pages/contribute.html">Contribute</a></li>
+      </ul>
+    </nav>
+
+    <section class="container">
+      <h1>CONTRIBUTE</h1>
+      <form id="contributeForm">
+        <label for="animal_name">Name of the Animal:</label>
+        <input type="text" id="animal_name" name="animal_name" required />
+        <br />
+        <br />
+
+        <label for="animal_description">Description:</label>
+        <br />
+        <textarea
+          id="animal_description"
+          name="animal_description"
+          rows="4"
+          cols="50"
+          required
+        ></textarea>
+        <br />
+        <br />
+
+        <label for="animal_photo">Photo:</label>
+        <input
+          type="file"
+          id="animal_photo"
+          name="animal_photo"
+          accept="image/*"
+          required
+        />
+        <br />
+        <br />
+
+        <label for="animal_habitat">Habitat:</label>
+        <select id="animal_habitat" name="animal_habitat" required>
+          <option value="forest">Forest</option>
+          <option value="desert">Desert</option>
+          <option value="ocean">Ocean</option>
+          <option value="grassland">Grassland</option>
+          <option value="mountain">Mountain</option>
+        </select>
+        <br />
+        <br />
+
+        <fieldset>
+          <legend>Type of Animal:</legend>
+          <label>
+            <input type="radio" name="animal_type" value="mammal" required />
+            Mammal
+          </label>
+          <br />
+          <label>
+            <input type="radio" name="animal_type" value="reptile" />
+            Reptile
+          </label>
+          <br />
+          <label>
+            <input type="radio" name="animal_type" value="bird" />
+            Bird
+          </label>
+          <br />
+          <label>
+            <input type="radio" name="animal_type" value="amphibian" />
+            Amphibian
+          </label>
+          <br />
+          <label>
+            <input type="radio" name="animal_type" value="fish" />
+            Fish
+          </label>
+          <br />
+          <label>
+            <input type="radio" name="animal_type" value="invertebrate" />
+            Invertebrate
+          </label>
+          <br />
+          <label>
+            <input type="radio" name="animal_type" value="other" />
+            Other
+          </label>
+          <br />
+        </fieldset>
+        <br />
+
+        <label for="agree_terms">
+          <input type="checkbox" id="agree_terms" name="agree_terms" required />
+          I agree to the terms and conditions
+        </label>
+        <br />
+        <br />
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <script src="../js/sendMail.js"></script>
+  </body>
+</html>
